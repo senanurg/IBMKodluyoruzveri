@@ -31,19 +31,11 @@ Proje 2
 Yukarıdaki dizinin sort türüne göre aşamalarını yazınız.
 Big-O gösterimini yazınız.
 
-
-
-1  :                  [16,21,11]                             [8,12,22]
-                    /           \                         /           \
-2  :            [16,21]    -    [11]                  [8,12]    -    [22]
-                /        \             \               /      \            \
-3  :          [16]    -    [21]    -    [11]        [8]     -    [12]    -    [22]   
-                \       /              /             \         /            /
-4    :             [16,21]    -    [11]                  [8,12]    -    [22]
-                     \            /                        \           /
-5  :                    [11,16,21]                            [8,12,22]
-                                  
-6  :                                 [8,11,12,16,21,22]
+1.Adım (Bölme): [16, 21, 11] ve [8, 12, 22] olmak üzere iki alt diziye ayrılır.
+2.Adım (Bölme): [16] ve [21, 11] ile [8] ve [12, 22] olmak üzere dört alt diziye ayrılır.
+3.Adım (Birleştirme): [16] ve [21, 11] birleştirilir, [8] ve [12, 22] birleştirilir.
+4.Adım (Birleştirme): [11, 16, 21] ve [8, 12, 22] birleştirilir.
+5.Adım (Sonuç): [8, 11, 12, 16, 21, 22] olarak sıralı dizi elde edilir.
 
 
 Big-O gösterimi O(n log n)'dir.
